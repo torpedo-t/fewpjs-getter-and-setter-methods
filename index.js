@@ -24,25 +24,12 @@ class Circle {
 
     get area() {
         // return pie * radius^2
-        return this.radius ** 2 * Math.PI;
+        return (this.radius ** 2) * Math.PI;
     }
 
     set area(newArea) {
         console.log(newArea)
-        this.radius = Math.sqrt(newArea) / Math.PI;
+        // area divided by pie and then the square root of that number
+        this.radius = Math.sqrt(newArea / Math.PI);
     }
 }
-
-// class Square {
-//     constructor(sideLength) {
-//       this.sideLength = sideLength;
-//     }
-  
-//     get area() {
-//       return this.sideLength * this.sideLength;
-//     }
-  
-//     set area(newArea) {
-//       this.sideLength = Math.sqrt(newArea);
-//     }
-//   }
